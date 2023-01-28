@@ -5,8 +5,6 @@ from matplotlib import pyplot as plt
 import cv2
 
 
-# Point=[u,v,index,theta]
-
 class same_points:
     def __init__(self,ID,color):
         self.list=[]

@@ -21,11 +21,7 @@ def Remap_img(img,mtx,dist):
 
 def read(fn, num, tag):
     im = cv2.imread(fn + str(num) + ".jpg")
-    #mtx=np.loadtxt("F:\zemi\Structure from Motion\data\calibration\K_"+tag+".csv",delimiter=",")
-    #dist=np.loadtxt("F:\zemi\Structure from Motion\data\calibration\d_"+tag+".csv",delimiter=",")
-    #Remap_img(im,mtx,dist)
     img = cv2.rotate(im, cv2.ROTATE_90_CLOCKWISE)
-    #cv2.imwrite("F:\zemi\Structure from Motion\data\calibration\Remap_"+tag+"\img_"+str(num)+".jpg",img)
     return img
 
 
@@ -108,9 +104,3 @@ def track_lattice(fn, ofn, start, stop1, stop2, step, size_temp, size_find,left_
         #draw_lattice(img_after, laL3, size_temp, ofn, num)
     return all_list
 
-
-
-'''
-fn = "data/images/middle_1203/img_"
-all_list = track_lattice(fn,30000,30090,5,11,17)
-'''
